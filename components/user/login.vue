@@ -49,7 +49,7 @@ export default {
             const valid = this.$refs.formLogin.validate()
             if (valid) {
                 const sendData = {
-                    email: this.correoElectronico,
+                    email: this.correoElec,
                     password: this.password
                 }
                 await this.$auth.loginWith('local', {

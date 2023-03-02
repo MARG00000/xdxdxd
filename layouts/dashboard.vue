@@ -1,26 +1,35 @@
 <template>
-    <v-app id="inspire">
-      <v-navigation-drawer
-        v-model="drawer"
-        app
-      >
-        <!--  -->
-      </v-navigation-drawer>
-  
-      <v-app-bar app>
-        <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-  
-        <v-toolbar-title>Application</v-toolbar-title>
-      </v-app-bar>
-  
-      <v-main>
-        <!--  -->
-      </v-main>
-    </v-app>
-  </template>
-  
-  <script>
-    export default {
-      data: () => ({ drawer: null }),
-    }
-  </script>
+  <v-app id="inspire">
+    <v-navigation-drawer
+      v-model="drawer"
+      absolute
+      permanent
+      app
+    >
+      <v-list-item>
+        <v-list-item-content>
+          <v-list-item-title class="text-h6">
+            Inicio
+          </v-list-item-title>
+          <v-list-item-subtitle>
+            Sistema
+          </v-list-item-subtitle>
+        </v-list-item-content>
+      </v-list-item>
+    </v-navigation-drawer>
+
+    <v-app-bar app>
+      <v-toolbar-title>CRUD con Nuxt y Firebase</v-toolbar-title>
+    </v-app-bar>
+
+    <v-main>
+      <Nuxt />
+    </v-main>
+  </v-app>
+</template>
+
+<script>
+  export default {
+    data: () => ({ drawer: null }),
+  }
+</script>
